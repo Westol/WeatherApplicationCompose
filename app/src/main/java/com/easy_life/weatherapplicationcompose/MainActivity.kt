@@ -3,14 +3,15 @@ package com.easy_life.weatherapplicationcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.easy_life.weatherapplicationcompose.screens.MainScreen
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.easy_life.weatherapplicationcompose.screens.MainCard
+import com.easy_life.weatherapplicationcompose.screens.TabLayout
 import com.easy_life.weatherapplicationcompose.ui.theme.WeatherApplicationComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +19,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WeatherApplicationComposeTheme {
-                MainScreen()
+                Image(
+                    painter = painterResource(
+                        id = R.drawable.weather_bg
+                    ),
+                    contentDescription = "image 1",
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .alpha(0.9f),
+                    contentScale = ContentScale.FillBounds
+                )
+                Column {
+                    MainCard()
+                    TabLayout()
+                }
             }
         }
     }
