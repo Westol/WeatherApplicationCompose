@@ -30,6 +30,8 @@
 * Подключено API.
 * Создание MainScreen в Jetpack Compose.
 * Загрузка прогноза погоды для текущего местоположения.
+* Создание List Item для списка.
+* Сделали data class WeatherModel.
 
 ## Скриншоты
 <img src="Screenshot_20220617_155516.png" width="440" height="810"/>
