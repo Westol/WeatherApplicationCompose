@@ -34,4 +34,4 @@
 * Сделал data class WeatherModel.
 
 ## Скриншоты
-<img src="Screenshot_20220617_155516.png" width="440" height="810"/>
+<img src="Screenshot_20220801_232741.png" width="440" height="810"/>
